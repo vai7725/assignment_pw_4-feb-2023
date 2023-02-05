@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar,
+.nav-links,
+.logo-links,
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  background-color: #5955b3;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+}
+
+.navbar {
+  height: 10vh;
+  padding: 0 2rem;
+}
+
+.logo-links {
+  width: 50%;
+}
+
+.logo {
+  min-width: 70px;
+  width: 20%;
+}
+
+.nav-links {
+  width: 60%;
+}
+
+.nav-links li {
+  margin: 0 0.5rem;
+}
+
+.ham {
+  display: none;
+}
+
+.ham-bar {
+  background-color: #5955b3;
+  height: 5px;
+  width: 30px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.main {
+  padding: 2rem;
+  height: 90vh;
+}
+
+.notation {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.notation h1 {
+  text-transform: capitalize;
+  line-height: 3.5rem;
+  color: #3c2e60;
+  width: 50%;
+  font-size: 3rem;
+  min-width: 400px;
+}
+
+.notation h1 span {
+  color: #5955b3;
+}
+.notation p {
+  font-size: 0.9rem;
+}
+
+.landing-img {
+  min-width: 400px;
+  width: 50%;
+  max-width: 600px;
+}
+
+.illustration {
+  width: 100%;
+}
+
+@media screen and (max-width: 830px) {
+  .main::before {
+    content: "";
+    position: absolute;
+    height: 60%;
+    width: 70%;
+    background: url("../imgs/Header\ Illustration.png") no-repeat center
+      center/cover;
+    z-index: -1;
+    opacity: 0.15;
+    /* filter: brightness(90%); */
+  }
+  .landing-img {
+    display: none;
+  }
+  .main {
+    justify-content: center;
+  }
+  .notation {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .ham {
+    display: block;
+  }
+  .btn-nav {
+    display: none;
+  }
+  .nav-links {
+    display: none;
+  }
+  .navbar {
+    padding: 0.5rem;
+  }
+  .main {
+    padding: 2rem 0;
+  }
+}
